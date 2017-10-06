@@ -108,14 +108,17 @@ function soundButtonClicked() {
     fu.classList.toggle("explodeSound");
     panda.classList.toggle("kungExplode");
     audio.play();
-    audio.addEventListener("ended", startAgain);
+    setTimeout(startAgain, 2000);
+}
 
-    function startAgain() {
-        console.log("Just Kidding");
-        fu.classList.toggle("fuJump");
-        panda.classList.toggle("kungJump");
-        audi.play();
+function startAgain() {
+    console.log("Just Kidding");
+    fu.classList.add("jumpFu");
+    panda.classList.add("jumpKung");
+    audi.play();
+    setTimeout(pauseAudio, 5000);
+}
 
-    }
-
+function pauseAudio() {
+    audi.pause();
 }

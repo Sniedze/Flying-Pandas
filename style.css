@@ -1,283 +1,298 @@
-.kungfu {
-    display: flex;
-    padding-top: 15em;
-    padding-left: 15em;
-    border-bottom-style: ridge;
-    border-bottom-color: chocolate;
-    border-bottom-width: 2em;
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.fu {
-    margin-left: 95px;
-    margin-right: 1em;
-    width: 280px;
-}
-
-body {
-    background: url(images/back.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-
-#buttons {
-    width: 150px;
-    padding-left: 7em;
-    border: 0;
-    text-align: right;
-}
-
-button {
-    width: 150px;
-    margin-bottom: 0.5em;
-}
-
-.pandaShake {
-    animation: shakeIt 0.2s infinite;
-    animation-iteration-count: 3;
-}
-
-.fuShake {
-    animation: shakeIt 0.2s 0.1s infinite;
-    animation-iteration-count: 3;
-}
-
-@keyframes shakeIt {
-    25% {
-        transform: translateX(-10px)
+    .kungfu {
+        display: flex;
+        padding-top: 15em;
+        padding-left: 15em;
+        border-bottom-style: ridge;
+        border-bottom-color: chocolate;
+        border-bottom-width: 2em;
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
-    75% {
-        transform: translateX(10px)
-    }
-}
 
-.kungFade {
-    animation: fadeIt infinite 3s forwards;
-}
-
-.fuFade {
-    animation: fadeIt infinite 3s 1.5s forwards;
-}
-
-@keyframes fadeIt {
-    50% {
-        -webkit-opacity: 0.01;
-        -moz-opacity: 0.01;
-        opacity: 0.01;
-        color: #000;
+    .fu {
+        margin-left: 95px;
+        margin-right: 1em;
+        width: 280px;
     }
-    100% {
-        -webkit-opacity: 1;
-        -moz-opacity: 1;
-        opacity: 1;
-        transition: all 4s ease-out 0s;
-    }
-}
 
-.kungJump {
-    animation: jumpIt infinite 2s forwards;
-}
+    body {
+        background: url(images/back.jpg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
 
-.fuJump {
-    animation: jumpIt 2s 1s infinite;
-}
+    #buttons {
+        width: 150px;
+        padding-left: 7em;
+        border: 0;
+        text-align: right;
+    }
 
-@keyframes jumpIt {
-    50% {
-        transform: translateY(-30vh);
-        transition-timing-function: ease-in;
+    button {
+        width: 150px;
+        margin-bottom: 0.5em;
     }
-}
 
-.kungGotHit {
-    animation: hitIt 1.5s forwards;
-}
+    .pandaShake {
+        animation: shakeIt 0.2s infinite;
+        animation-iteration-count: 3;
+    }
 
-.fuGotHit {
-    animation: hitIts 1.5s forwards;
-}
+    .fuShake {
+        animation: shakeIt 0.2s 0.1s infinite;
+        animation-iteration-count: 3;
+    }
 
-@keyframes hitIt {
-    50% {
-        transform: translateY(-28vh) translateX(3.5vw);
-        transition-timing-function: ease-in;
+    @keyframes shakeIt {
+        25% {
+            transform: translateX(-10px)
+        }
+        75% {
+            transform: translateX(10px)
+        }
     }
-    100% {
-        transform: rotate(-90deg) translateX(-10vw);
-    }
-}
 
-@keyframes hitIts {
-    50% {
-        transform: translateY(-28vh)translateX(-3.5vw);
-        transition-timing-function: ease-in;
+    .kungFade {
+        animation: fadeIt infinite 3s forwards;
     }
-    100% {
-        transform: rotate(90deg) translateX(7vw);
-    }
-}
 
-.kungFall {
-    animation: kungFall 1.3s 0.6s forwards;
-}
+    .fuFade {
+        animation: fadeIt infinite 3s 1.5s forwards;
+    }
 
-.fuFall {
-    animation: fuFall 1s forwards;
-}
+    @keyframes fadeIt {
+        50% {
+            -webkit-opacity: 0.01;
+            -moz-opacity: 0.01;
+            opacity: 0.01;
+            color: #000;
+        }
+        100% {
+            -webkit-opacity: 1;
+            -moz-opacity: 1;
+            opacity: 1;
+            transition: all 4s ease-out 0s;
+        }
+    }
 
-@keyframes kungFall {
-    70% {
-        transform: translateX(7vw)
+    .kungJump {
+        animation: jumpIt infinite 1.2s forwards;
     }
-    100% {
-        transform: translateX(7vw) translateY(3vh)rotate(45deg);
-        transition-timing-function: ease-out;
-    }
-}
 
-@keyframes fuFall {
-    100% {
-        transform: rotate(90deg) translateX(7vw);
-        transition-timing-function: ease-out;
+    .fuJump {
+        animation: jumpIt 1.2s 0.6s infinite;
     }
-}
 
-.kungMoveIn {
-    animation: MoveIn 3s forwards;
-}
+    @keyframes jumpIt {
+        50% {
+            transform: translateY(-30vh);
+            transition-timing-function: ease-in;
+        }
+    }
 
-@keyframes MoveIn {
-    0% {
-        transform: translateX(-100vw);
+    .kungGotHit {
+        animation: hitIt 1.2s forwards;
     }
-    100% {
-        transform: translateX(30%);
-        transition-timing-function: ease-in;
-    }
-}
 
-.kungMoveOut {
-    animation: MoveOut 5s forwards;
-}
+    .fuGotHit {
+        animation: hitIts 1.2s forwards;
+    }
 
-@keyframes MoveOut {
-    0% {
-        transform: translateX(30%);
+    @keyframes hitIt {
+        50% {
+            transform: translateY(-28vh) translateX(3.5vw);
+            transition-timing-function: ease-in;
+        }
+        100% {
+            transform: rotate(-90deg) translateX(-10vw);
+        }
     }
-    100% {
-        transform: translateX(85vw);
-        transition-timing-function: ease-out;
-    }
-}
 
-.fuMove {
-    animation: move0 2s forwards;
-}
+    @keyframes hitIts {
+        50% {
+            transform: translateY(-28vh)translateX(-3.5vw);
+            transition-timing-function: ease-in;
+        }
+        100% {
+            transform: rotate(90deg) translateX(7vw);
+        }
+    }
 
-@keyframes move0 {
-    100% {
-        transform: translateX(-42vw);
-        transition-timing-function: ease-in-out;
+    .kungFall {
+        animation: kungFall 1.3s 0.6s forwards;
     }
-}
 
-.explode {
-    animation: exp 1s forwards;
-}
+    .fuFall {
+        animation: fuFall 1s forwards;
+    }
 
-@keyframes exp {
-    50% {
-        transform: translateY(-28vh) translateX(3.5vw);
-        transition-timing-function: ease-in;
+    @keyframes kungFall {
+        30% {
+            transform: translateX(7vw)
+        }
+        100% {
+            transform: translateX(7vw) translateY(3vh)rotate(45deg);
+            transition-timing-function: cubic-bezier(.67, .55, 0.5, .67);
+        }
     }
-    95% {
-        opacity: 0;
-        transform: scale(3) rotate(200deg);
-    }
-    100% {
-        transform: translateX(-100vw);
-    }
-}
 
-.explodeFu {
-    animation: expl 1s forwards;
-}
+    @keyframes fuFall {
+        100% {
+            transform: rotate(90deg) translateX(7vw);
+            transition-timing-function: ease-out;
+        }
+    }
 
-@keyframes expl {
-    50% {
-        transform: translateY(-28vh) translateX(-3.5vw);
-        transition-timing-function: ease-in;
+    .kungMoveIn {
+        animation: MoveIn 3s forwards;
     }
-    65% {
-        opacity: 0.2;
-        transform: scale(3) rotate(-200deg);
-    }
-    100% {
-        transform: translateX(-100vw);
-    }
-}
 
-.moveOut {
-    animation: moout 2.4s infinite;
-}
+    @keyframes MoveIn {
+        from {
+            transform: translateX(-100vw);
+        }
+        to {
+            transform: translateX(30%);
+            transition-timing-function: ease-in;
+        }
+    }
 
-@keyframes moout {
-    0% {
-        transform: translateX(-100vw);
+    .kungMoveOut {
+        animation: MoveOut 5s forwards;
     }
-    100% {
-        transform: translateX(100vw);
-        transition-timing-function: ease-in;
-    }
-}
 
-.moveOutFu {
-    animation: mo 2.4s 1.2s infinite;
-}
+    @keyframes MoveOut {
+        from {
+            transform: translateX(30%);
+        }
+        to {
+            transform: translateX(85vw);
+            transition-timing-function: ease-out;
+        }
+    }
 
-@keyframes mo {
-    0% {
-        transform: translateX(100vw);
+    .fuMove {
+        animation: move0 2s forwards;
     }
-    100% {
-        transform: translateX(-100vw);
-        transition-timing-function: ease-in;
-    }
-}
 
-.kungExplode {
-    animation: ex 3s;
-}
+    @keyframes move0 {
+        To {
+            transform: translateX(-42vw);
+            transition-timing-function: ease-in-out;
+        }
+    }
 
-@keyframes ex {
-    30% {
-        transform: translateY(-28vh) translateX(3.5vw);
-        transition-timing-function: ease-in;
+    .explode {
+        animation: exp 1s forwards;
     }
-    65% {
-        opacity: 0;
-        transform: scale(3) rotate(200deg);
-    }
-    100% {
-        transform: translateX(-100vw);
-    }
-}
 
-.explodeSound {
-    animation: explo 3s;
-}
+    @keyframes exp {
+        50% {
+            transform: translateY(-28vh) translateX(3.5vw);
+            transition-timing-function: ease-in;
+        }
+        95% {
+            opacity: 0;
+            transform: scale(3) rotate(200deg);
+        }
+        100% {
+            transform: translateX(-100vw);
+        }
+    }
 
-@keyframes explo {
-    30% {
-        transform: translateY(-28vh) translateX(-3.5vw);
-        transition-timing-function: ease-in;
+    .explodeFu {
+        animation: expl 1s forwards;
     }
-    65% {
-        opacity: 0.2;
-        transform: scale(3) rotate(-200deg);
+
+    @keyframes expl {
+        50% {
+            transform: translateY(-28vh) translateX(-3.5vw);
+            transition-timing-function: ease-in;
+        }
+        65% {
+            opacity: 0.2;
+            transform: scale(3) rotate(-200deg);
+        }
+        100% {
+            transform: translateX(-100vw);
+        }
     }
-    100% {
-        transform: translateX(-100vw);
+
+    .moveOut {
+        animation: moout 2.4s infinite;
     }
-}
+
+    @keyframes moout {
+        from {
+            transform: translateX(-100vw);
+        }
+        to {
+            transform: translateX(100vw);
+            transition-timing-function: ease-in;
+        }
+    }
+
+    .moveOutFu {
+        animation: mo 2.4s 1.2s infinite;
+    }
+
+    @keyframes mo {
+        from {
+            transform: translateX(100vw);
+        }
+        to {
+            transform: translateX(-100vw);
+            transition-timing-function: ease-in;
+        }
+    }
+
+    .kungExplode {
+        animation: ex 1s forwards;
+    }
+
+    @keyframes ex {
+        50% {
+            transform: translateY(-28vh) translateX(3.5vw);
+            transition-timing-function: ease-in;
+        }
+        95% {
+            opacity: 0;
+            transform: scale(3) rotate(200deg);
+        }
+        100% {
+            transform: translateX(-100vw);
+        }
+    }
+
+    .explodeSound {
+        animation: explo 1s forwards;
+    }
+
+    @keyframes explo {
+        50% {
+            transform: translateY(-28vh) translateX(-3.5vw);
+            transition-timing-function: ease-in;
+        }
+        65% {
+            opacity: 0.2;
+            transform: scale(3) rotate(-200deg);
+        }
+        100% {
+            transform: translateX(-100vw);
+        }
+    }
+
+    .jumpKung {
+        animation: jump 1s 5 forwards;
+    }
+
+    .jumpFu {
+        animation: jump 1s 0.5s 5 forwards;
+    }
+
+    @keyframes jump {
+        50% {
+            transform: translateY(-30vh);
+            transition-timing-function: ease-in;
+        }
+    }
